@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+  &__label {
+    display: block;
+    &--text {
+      display: block;
+      margin: auto;
+      outline-style: none;
+    }
+  }
+}
