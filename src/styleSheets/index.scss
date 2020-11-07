@@ -1,14 +1,18 @@
-body {
-  background-image: url(../book.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
+  margin-top: 8%;
+  @media all and (min-width: 768px) {
+    margin-top: 5%;
+  }
+  @media all and (min-width: 1024px) {
+    margin-top: 0;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  background-image: url(../note.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }

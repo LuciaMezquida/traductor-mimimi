@@ -14,19 +14,17 @@ class TextInput extends React.Component {
   }
   render() {
     return (
-      <div className="App">
-        <label htmlFor="tranlator" className="App__label">
-          Escribe lo que quieras traducir
-          <textarea
-            className="App__label--text"
-            name="tranlator"
-            id="tranlator"
-            cols="60"
-            rows="10"
-            onChange={this.handleChange}
-          ></textarea>
-        </label>
-      </div>
+      <label htmlFor="tranlator" className="App__label">
+        Expresa aquí tu opinión:
+        <textarea
+          className="App__label--text"
+          name="tranlator"
+          id="tranlator"
+          cols="30"
+          rows="10"
+          onChange={this.handleChange}
+        ></textarea>
+      </label>
     );
   }
 }

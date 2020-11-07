@@ -17,10 +17,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <>
+      <div className="App">
         <TextInput handleInputText={this.handleText} />
         <MIMIMITranslator value={this.text} />
-      </>
+      </div>
     );
   }
 }
