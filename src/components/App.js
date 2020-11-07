@@ -1,20 +1,28 @@
 import "../styleSheets/App.scss";
+import React from "react";
+import TextInput from "./TextInput";
+import MIMIMITranslator from "./MIMIMITranslator";
 
-function App() {
-  return (
-    <div className="App">
-      <label htmlFor="tranlator" className="App__label">
-        Escribe lo que quieras traducir
-        <textarea
-          className="App__label--text"
-          name="tranlator"
-          id="tranlator"
-          cols="60"
-          rows="20"
-        ></textarea>
-      </label>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.text = "";
+    this.handleText = this.handleText.bind(this);
+  }
+  handleText(text) {
+    this.text = text.replace(/[aáeéiíoóuú]/gi, "i");
+    console.log("app: " + this.text);
+    this.forceUpdate();
+  }
+
+  render() {
+    return (
+      <>
+        <TextInput handleInputText={this.handleText} />
+        <MIMIMITranslator value={this.text} />
+      </>
+    );
+  }
 }
 
 export default App;
